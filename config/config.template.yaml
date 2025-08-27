@@ -1,0 +1,65 @@
+# bench2bash-starter Configuration
+# Copy this file to config.yaml and customize for your project
+
+# Project metadata
+project_name: "bench2bash-analysis"
+description: "Reproducible bioinformatics pipeline"
+author: "Your Name"
+email: "your.email@example.com"
+
+# Input data paths
+data_dir: "data"
+samples_file: "data/metadata/samples.tsv"
+reference_genome: "data/references/genome.fa"
+annotation_file: "data/references/annotation.gtf"
+
+# Output directories
+output_dir: "results"
+logs_dir: "logs"
+temp_dir: "temp"
+
+# Computational resources
+threads: 4
+memory: "8G"
+cluster_config: "config/cluster.yaml"
+
+# Quality control parameters
+fastqc:
+  enabled: true
+  threads: 2
+
+multiqc:
+  enabled: true
+  
+# Preprocessing parameters  
+trimming:
+  tool: "trimmomatic"  # or "cutadapt", "fastp"
+  quality_threshold: 20
+  min_length: 50
+  adapter_file: "data/adapters/TruSeq3-PE-2.fa"
+
+# Alignment parameters
+alignment:
+  tool: "star"  # or "bwa", "hisat2"
+  index_dir: "data/references/star_index"
+  threads: 4
+  
+# Analysis parameters
+analysis:
+  remove_duplicates: true
+  minimum_mapping_quality: 20
+  count_features: true
+  
+# Visualization
+plots:
+  format: "png"  # or "pdf", "svg"
+  dpi: 300
+  width: 10
+  height: 8
+
+# Advanced options
+advanced:
+  use_singularity: false
+  singularity_args: "--bind /scratch"
+  keep_temp: false
+  benchmark: true

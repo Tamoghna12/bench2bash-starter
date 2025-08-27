@@ -1,0 +1,7 @@
+sample_id	condition	replicate	read1	read2	description
+sample01	control	1	data/samples/sample01_R1.fastq.gz	data/samples/sample01_R2.fastq.gz	Control biological replicate 1
+sample02	control	2	data/samples/sample02_R1.fastq.gz	data/samples/sample02_R2.fastq.gz	Control biological replicate 2
+sample03	control	3	data/samples/sample03_R1.fastq.gz	data/samples/sample03_R2.fastq.gz	Control biological replicate 3
+sample04	treatment	1	data/samples/sample04_R1.fastq.gz	data/samples/sample04_R2.fastq.gz	Treatment biological replicate 1
+sample05	treatment	2	data/samples/sample05_R1.fastq.gz	data/samples/sample05_R2.fastq.gz	Treatment biological replicate 2
+sample06	treatment	3	data/samples/sample06_R1.fastq.gz	data/samples/sample06_R2.fastq.gz	Treatment biological replicate 3

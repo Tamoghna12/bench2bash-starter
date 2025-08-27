@@ -1,0 +1,76 @@
+name: bench2bash-research
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  # Core Python ecosystem
+  - python=3.9
+  - pip
+  - jupyter
+  - notebook
+  
+  # Workflow management
+  - snakemake=7.32.4
+  - snakemake-minimal
+  
+  # Quality control
+  - fastqc=0.12.1
+  - multiqc=1.15
+  - qualimap=2.2.2d
+  
+  # Preprocessing
+  - trimmomatic=0.39
+  - cutadapt=4.4
+  - fastp=0.23.4
+  
+  # Alignment
+  - bwa=0.7.17
+  - star=2.7.10b
+  - hisat2=2.2.1
+  
+  # SAM/BAM processing
+  - samtools=1.17
+  - bcftools=1.17
+  - htslib=1.17
+  - bedtools=2.30.0
+  
+  # Variant calling
+  - gatk4=4.4.0.0
+  - freebayes=1.3.6
+  - vcftools=0.1.16
+  
+  # R and bioinformatics packages
+  - r-base=4.3.1
+  - r-essentials
+  - bioconductor-deseq2
+  - bioconductor-edger
+  - bioconductor-limma
+  
+  # Data manipulation and visualization
+  - pandas=2.0.3
+  - numpy=1.24.3
+  - scipy=1.11.1
+  - matplotlib=3.7.2
+  - seaborn=0.12.2
+  - plotly=5.15.0
+  
+  # Bioinformatics-specific
+  - biopython=1.81
+  - pysam=0.21.0
+  - pybedtools=0.9.1
+  
+  # Utilities
+  - parallel=20230722
+  - tree
+  - wget
+  - curl
+  
+  # Optional: for containerization
+  - docker-py
+  
+  # Python packages via pip
+  - pip:
+    - snakemake-executor-plugin-cluster-generic
+    - datrie
+    - smart_open
